@@ -4,27 +4,27 @@
 using std::invalid_argument;
 using std::domain_error;
 
-struct NodoNullo :public invalid_argument
+struct NullNode :public invalid_argument
 {
-	NodoNullo() :invalid_argument("Parametro Nullo!\n") {}
+	NullNode() :invalid_argument("Null Parameter!\n") {}
 };
 
-struct DimRaggiunta: public invalid_argument
+struct MaxDim: public invalid_argument
 {
-	DimRaggiunta() :invalid_argument("Dimensione massima raggiunta!\n") {}
+	MaxDim() :invalid_argument("Maximum dimension reached!\n") {}
 };
 
-struct RadiceEsistente : public domain_error 
+struct ExistingRoot : public domain_error 
 {
-	RadiceEsistente() :domain_error("La radice e' gia' presente!\n"){}
+	ExistingRoot() :domain_error("The root already exists!\n"){}
 };
 
-struct AlberoVuoto :public domain_error
+struct EmptyTree :public domain_error
 {
-	AlberoVuoto() :domain_error("L'albero e' vuoto!\n"){}
+	EmptyTree() :domain_error("The tree is empty!\n"){}
 };
 
-struct NodoEsistente :public domain_error
+struct ExistingNode :public domain_error
 {
-	NodoEsistente() :domain_error("Il nodo e' gia' presente!\n"){}
+	ExistingNode() :domain_error("The node already exists!\n"){}
 };
